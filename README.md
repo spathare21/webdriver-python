@@ -1,20 +1,20 @@
-h1. WebDriver Template
+# WebDriver Template
 
-h2. Introduction
+## Introduction
 This project aims to provide a WebDriver template for Java, Python and Perl, using some quality engineering and development collaboration learnings.
 
-h2. Features
+## Features
 
-h3. Chain, Logging, Screenshots, Timing
+### Chain, Logging, Screenshots, Timing
 
-h2. Usage
+## Usage
 ...
 
-h3. Java
+### Java
 ...
 
-h3. Python
+### Python
 ...
 
-h3. Perl
+### Perl
 ...
