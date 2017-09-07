@@ -11,7 +11,7 @@ from TestHarness import WebDriverModule
 
 class TestCase(unittest.TestCase):
     """
-      Testcase containing
+      Testcase base
     """
     def setup_method(self, method):
         self.init_logging()
