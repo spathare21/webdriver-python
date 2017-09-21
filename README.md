@@ -17,10 +17,10 @@ Element waits are built into every action, preventing misses on slow element app
 ### Chains
 Chains can provide a nice, readable test case. For example,<br>
 `home_page = BasicFlow.BasicFlow().goto_home()\`<br>
-`    .click_login()\`<br>
-`    .enter_username('admin')\`<br>
-`    .enter_password('password')\`<br>
-`    .press_login()`<br>
+  `    .click_login()\`<br>
+  `    .enter_username('admin')\`<br>
+  `    .enter_password('password')\`<br>
+  `    .press_login()`<br>
 `self.assertEquals(homepage.logged_in_as(), "admin")`
 
 ## Usage
@@ -47,7 +47,7 @@ The following can be set as desired:<br>
 `SCREENSHOTDIR=/tmp/somewhere` : (Optional) Screenshot directory<br>
 
 #### Run
-cd Test
+cd Test<br>
 pytest-3
 
 #### Augmentations
