@@ -2,8 +2,10 @@ import logging
 
 from selenium.webdriver.common.by import By
 
+from I18n import I18nObjects
 from Page import HomePage
 from Page.AbstractPage import AbstractPage
+from TestConfig import TestRunConfig
 
 
 class SignInPage(AbstractPage):
@@ -11,7 +13,6 @@ class SignInPage(AbstractPage):
       Example Sign In Page. This page contains a username field, password field and log in button.
       Clicking the login button returns the user to the homepage, if successful.
     """
-
     # LOCATOR
     USERNAMEFIELD = (By.ID, "username")
     PASSWORDFIELD = (By.ID, "password")
@@ -43,4 +44,8 @@ class SignInPage(AbstractPage):
 
     def is_login_failure(self):
         logging.info("Query failure message shown")
-        return self.element_contains_text(self.LOGINFAILURE, self.LOGINFAILUREMESSAGE)
+        locale = TestRunConfig.TestRunConfig().i18n_locale
+        fail_text = I18nObjects.I18nObjects().translation_for(self.i18n_name,
+                                                              self.LOGINFAILUREMESSAGE,
+                                                              locale)
+        return self.element_contains_text(self.LOGINFAILURE, fail_text)
